@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/28/user/1459895).
-* Наставник: `Неизвестно`.
+* Студент: [Алексей Степанов](https://up.htmlacademy.ru/htmlcss/28/user/1459895).
+* Наставник: [Светлана Рожкова](https://up.htmlacademy.ru/htmlcss/28/user/441669)
 
 ---
 
