@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
    <header class="main-header">
@@ -32,6 +32,7 @@
     </div>
     <div class="user-profile">  
      <a href="profile.html">Равшан Джамшутович</a>
+     <a class="" href="/profile/exit"></a>
      <ul>
       <li><a href="blank.html">Мои заказы</a></li>
       <li><a href="blank.html">Личный кабинет</a></li>
@@ -52,7 +53,7 @@
    <main>
     <div class="catalog-navigation"> 
      <ul class="page-navigation">
-      <li><a href="index.html">ГЛАВНАЯ</a></li>
+      <li><a href="index.html"><img src="home.svg" alt="иконка перехода на главную страницу" width="" height=""></a></li>
       <li><a href="catalog.html">КАТАЛОГ</a></li>
       <li><a href="blank.html">ИНСТРУМЕНТ</a></li>
       <li><a>ПЕРФОРАТОРЫ</a></li>
@@ -62,19 +63,38 @@
       <h2>ПЕРФОРАТОРЫ</h2>
      <div class="container">
       <div class="filter">
-
+       <form action="https://echo.htmlacademy.ru/" method="get" oninput="pricecountoutput2.value=pricecount.value">
+           <fieldset class ="price">
+             <legend>ФИЛЬТР:</legend> 
+             <label for="pricecount">ЦЕНА:</label>
+             <input type="range" min="0" max="30000" step="100" name="pricecount" id="pricecount">
+             <output name="pricecountoutput">0</output> - 
+             <output name="pricecountoutput2">30000</output>
+           </fieldset>
+           <fieldset class="manufacturers">
+               <legend>ПРОИЗВОДИТЕЛИ:</legend>
+               <label><input type="checkbox" name="manufacturers-item" value="BOSH" checked>BOSH</label>
+               <label><input type="checkbox" name="manufacturers-item" value="INTERSCOL">ИНТЕРСКОЛ</label>
+               <label><input type="checkbox" name="manufacturers-item" value="MAKITA" checked>MAKITA</label>
+               <label><input type="checkbox" name="manufacturers-item" value="DEWALT">DEWALT</label>
+               <label><input type="checkbox" name="manufacturers-item" value="HITACHI">HITACHI</label>
+           </fieldset>
+           <fieldset class="nutrition">
+               <legend>ПИТАНИЕ:</legend>
+               <label><input type="radio" name="nutrition-item" value="rechargeable" checked>АККУМУЛЯТОРНЫЕ</label>
+               <label><input type="radio" name="nutrition-item" value="network">СЕТЕВЫЕ</label>
+           </fieldset>
+           <input type="submit" value="ПОКАЗАТЬ">
+       </form>
       </div>
-      <div class="manufacturers">
-
-
-      </div>
-      <div class="nutrition">
-
-
-      </div>
-       <button type="submit">ПОКАЗАТЬ</button>
-      <div class=sorting>
-
+       
+      <div class="sorting">
+          <p>СОРТИРОВКА:</p>
+          <ul class="sorting-list">
+              <li>ПО ЦЕНЕ</li>
+              <li>ПО ТИПУ</li>
+              <li>ПО ФУНКЦИОНАЛУ</li>
+          </ul>
       </div>
       <div class="catalog">
        <ul class="catalog-list">
@@ -82,9 +102,9 @@
           <p>
            <img src="bosh-1.jpg" alt="Перфоратор BOSH BFG 3000" width="" height=""> 
           </p>
-           <h3>Перфоратор BOSH BFG 3000</h3>
-           <p class="old-price">22500 P.</p>
-           <p class="price">15500 P.</p>
+           <h3>Перфоратор BOSH BFG 6000</h3>
+           <p class="old-price">30500 P.</p>
+           <p class="price">25500 P.</p>
         </li>
         <li class="catalog-item">
           <p>
@@ -98,9 +118,9 @@
           <p>
            <img src="bosh-3.jpg" alt="Перфоратор BOSH BFG 3000" width="" height="">
           </p> 
-           <h3>Перфоратор BOSH BFG 2000</h3>
-           <p class="old-price"></p>
-           <p class="price">12500 P.</p>
+           <h3>Перфоратор BOSH BFG 6000</h3>
+           <p class="old-price">30500 P.</p>
+           <p class="price">25500 P.</p>
         </li>
         <li class="catalog-item">
           <p>
@@ -215,6 +235,14 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
      </p>
     </section>
-   </footer>   
+   </footer>  
+   <section class="modal-cart">
+    <div class="modal-cart-content">
+       <p>Товар добавлен в корзину!</p>
+       <a href="blank.html">Оформить заказ</a>
+       <button class="continue_shopping" type="button">Продолжить покупки</button>
+       <button class="modal-cart-close" type="button">Закрыть</button>
+    </div>
+   </section> 
   </body>
 </html>
