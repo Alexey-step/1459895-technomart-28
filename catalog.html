@@ -11,9 +11,13 @@
      <img src="img/logo-technomart.svg" alt="логотип компании 'Техномарт'" width="108" height="18" >
     </a>
     <div class="user-nav">
-     <input class="user-nav__search" type="search" placeholder="Поиск:">
+     <form action="https://echo.htmlacademy.ru/" method="post">
+      <label>
+       <input class="user-nav__search" type="search" name="user_nav" placeholder="Поиск:" aria-label="Поле поиска">
+      </label>
+     </form>
      <a href="blank.html">Закладки: 0</a>
-     <a href="blank.html">Корзина: 0</a>
+     <a href="blank.html">Корзина: 10</a>
      <a href="blank.html">Оформить заказ</a>
     </div>
     <p class="header-text">
@@ -52,25 +56,27 @@
     <div class="breadcrumbs"> 
      <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item"><a href="index.html"><img src="img/icon-home.svg" alt="переход на главную страницу" width="14" height="12"></a></li>
-      <li class="breadcrumbs__item"><a href="catalog.html">КАТАЛОГ</a></li>
-      <li class="breadcrumbs__item"><a href="blank.html">ИНСТРУМЕНТ</a></li>
-      <li class="breadcrumbs__item"><a>ПЕРФОРАТОРЫ</a></li>
+      <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
+      <li class="breadcrumbs__item"><a href="blank.html">Инструмент</a></li>
+      <li class="breadcrumbs__item"><a>Перфораторы</a></li>
      </ul>
     </div>
     <section class="catalog">
-     <h1 class="catalog__title">ПЕРФОРАТОРЫ</h1>
+     <h1 class="catalog__title">Перфораторы</h1>
      <div class="catalog-container">
       <div class="catalog-container__filter">
-       <form action="https://echo.htmlacademy.ru/" method="get" oninput="pricecountoutput2.value=pricecount.value">
+       <h2 class="catalog-filter">Фильтр:</h2>
+        <form action="https://echo.htmlacademy.ru/" method="get" oninput="pricecountmax.value=pricecount.value">
            <fieldset class ="price">
-             <legend>ФИЛЬТР:</legend> 
-             <label for="pricecount">ЦЕНА:</label>
-             <input type="range" min="0" max="30000" step="100" name="pricecount" id="pricecount">
-             <output name="pricecountoutput">0</output> - 
-             <output name="pricecountoutput2">30000</output>
+             <legend>Цена:</legend> 
+             <label for="pricecount">
+             <input type="range" min="0" max="30000" step="100" name="pricecount" id="pricecount" aria-label="Шкала минимальной и максимальной цены">
+             </label>
+             <output name="pricecountmin">0</output> - 
+             <output name="pricecountmax">30000</output>
            </fieldset>
            <fieldset class="manufacturers">
-            <legend>ПРОИЗВОДИТЕЛИ:</legend>
+            <legend>Производители:</legend>
              <ul> 
               <li>   
                <label><input type="checkbox" name="filter-bosh" value="BOSH" checked>BOSH</label>
@@ -90,98 +96,101 @@
              </ul>
            </fieldset>
            <fieldset class="nutrition">
-            <legend>ПИТАНИЕ:</legend>
+            <legend>Питание:</legend>
              <ul>
               <li>
-               <label><input type="radio" name="nutrition-item" value="rechargeable" checked>АККУМУЛЯТОРНЫЕ</label>
+               <label><input type="radio" name="nutrition-item" value="rechargeable" checked>Аккумуляторные</label>
               </li>
               <li>
-               <label><input type="radio" name="nutrition-item" value="network">СЕТЕВЫЕ</label>
+               <label><input type="radio" name="nutrition-item" value="network">Сетевые</label>
               </li>
              </ul>
            </fieldset>
-           <button type="submit">ПОКАЗАТЬ</button>
+           <button type="submit">Показать</button>
        </form>
       </div> 
       <div class="sorting">
-          <p>СОРТИРОВКА:</p>
+          <p>Сортировка:</p>
           <ul class="sorting__list">
-              <li class="sorting__item">ПО ЦЕНЕ</li>
-              <li class="sorting__item">ПО ТИПУ</li>
-              <li class="sorting__item">ПО ФУНКЦИОНАЛУ</li>
+              <li class="sorting__item">По Цене</li>
+              <li class="sorting__item">По Типу</li>
+              <li class="sorting__item">По Функционалу</li>
+              <li class="sorting__item">
+                <button type="button" aria-label="сортировка списка товаров"></button>
+              </li>
           </ul>
       </div>
       <div class="catalog-content">
        <ul class="catalog-content__list">
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_6000.jpg" alt="Перфоратор bosh bfg6000" width="144" height="128"> 
+           <img src="img/bfg_6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128"> 
           </p>
-          <h3>Перфоратор bosh bfg 6000</h3>
+          <h3>Перфоратор BOSH BFG 6000</h3>
           <p class="old_price">30500 P.</p>
           <p class="price">25500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_6000.jpg" alt="Перфоратор bosh bfg 6000" width="144" height="128">
+           <img src="img/bfg_6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
           </p>
-          <h3>Перфоратор bosh bfg 6000</h3>
+          <h3>Перфоратор BOSH BFG 6000</h3>
           <p class="old_price">30500 P.</p>
           <p class="price">25500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_6000.jpg" alt="Перфоратор bosh bfg 6000" width="144" height="128">
+           <img src="img/bfg_6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
           </p> 
-          <h3>Перфоратор bosh bfg 6000</h3>
+          <h3>Перфоратор BOSH BFG 6000</h3>
           <p class="old_price">30500 P.</p>
           <p class="price">25500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_3000.jpg" alt="Перфоратор bosh bfg 3000" width="127" height="112"> 
+           <img src="img/bfg_3000.jpg" alt="Перфоратор BOSH BFG 3000" width="127" height="112"> 
           </p>
-          <h3>Перфоратор bosh bfg 3000</h3>
+          <h3>Перфоратор BOSH BFG 3000</h3>
           <p class="old_price">22500 P.</p>
           <p class="price">15500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_6000.jpg" alt="Перфоратор bosh bfg 6000" width="144" height="128">
+           <img src="img/bfg_6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
           </p>
-          <h3>Перфоратор bosh bfg 6000</h3>
+          <h3>Перфоратор BOSH BFG 6000</h3>
           <p class="old_price">30500 P.</p>
           <p class="price">25500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_2000.jpg" alt="Перфоратор bosh bfg2000" width="127" height="112">
+           <img src="img/bfg_2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112">
           </p> 
-          <h3>Перфоратор bosh bfg 2000</h3>
+          <h3>Перфоратор BOSH BFG 2000</h3>
           <p class="old_price"></p>
           <p class="price">12500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_3000.jpg" alt="Перфоратор bosh bfg 3000" width="127" height="112">
+           <img src="img/bfg_3000.jpg" alt="Перфоратор BOSH BFG 3000" width="127" height="112">
           </p> 
-          <h3>Перфоратор bosh bfg 3000</h3>
+          <h3>Перфоратор BOSH BFG 3000</h3>
           <p class="old_price">22500 P.</p>
           <p class="price">15500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_6000.jpg" alt="Перфоратор bosh bfg 6000" width="144" height="128">
+           <img src="img/bfg_6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128">
           </p>
-          <h3>Перфоратор bosh bfg 6000</h3>
+          <h3>Перфоратор BOSH BFG 6000</h3>
           <p class="old_price">30500 P.</p>
           <p class="price">25500 P.</p>
         </li>
         <li class="catalog-content__item">
           <p>
-           <img src="img/bfg_2000.jpg" alt="Перфоратор bosh bfg 2000" width="127" height="112">
+           <img src="img/bfg_2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112">
           </p> 
-          <h3>Перфоратор bosh bfg 2000</h3>
+          <h3>Перфоратор BOSH BFG 2000</h3>
           <p class="old_price"></p>
           <p class="price">12500 P.</p>
         </li>
@@ -189,8 +198,8 @@
       </div>
       <div class="catalog-pagination">
            <a href="#" aria-label="Текущая страница товаров">1</a>
-           <a href="#" aria-label="Текущая страница товаров">2</a>    
-           <a href="#" aria-label="Текущая страница товаров">3</a>
+           <a href="#" aria-label="Следующая страница товаров">2</a>    
+           <a href="#" aria-label="Следующая страница товаров">3</a>
            <a href="#" aria-label="Следующая страница товаров">СЛЕДУЮЩАЯ</a>
       </div>
      </div>
@@ -240,9 +249,9 @@
      </p>
      <div class="socials">
       <ul class="socials__list">
-        <li class="socials__link"><a href="#"><img src="img/icon-vk.svg" width="26" height="15" alt="логотип соцсети Вконтакте"></a></li>
-        <li class="socials__link"><a href="#"><img src="img/icon-fb.svg" width="12" height="22" alt="логотип соцсети Фэйсбук"></a></li>
-        <li class="socials__link"><a href="#"><img src="img/icon-insta.svg" width="21" height="21" alt="логотип соцсети Инстаграм"></a></li>
+        <li class="socials__link"><a href="#"><img src="img/icon-vk.svg" width="26" height="15" alt="Мы Вконтакте"></a></li>
+        <li class="socials__link"><a href="#"><img src="img/icon-fb.svg" width="12" height="22" alt="Наш Фэйсбук"></a></li>
+        <li class="socials__link"><a href="#"><img src="img/icon-insta.svg" width="21" height="21" alt="Наш Инстаграм"></a></li>
       </ul>
      </div>
      <p>
