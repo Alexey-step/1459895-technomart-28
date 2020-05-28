@@ -4,21 +4,28 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap">
   </head>
   <body>
    <header class="header">
-    <a class="header__logo">
+    <div class="header-container">
+     <a class="header-logo">
      <img src="img/logo-technomart.svg" alt="логотип компании 'Техномарт'" width="108" height="18">
-    </a>
-    <div class="user-nav">
-      <form action="https://echo.htmlacademy.ru/" method="post">
+     </a>
+     <div class="user-nav">
+      <form class="user-nav__form" action="https://echo.htmlacademy.ru/" method="post">
         <label>
          <input class="user-nav__search" type="search" name="user_nav" placeholder="Поиск:" aria-label="Поле поиска">
-        </label>
+         <svg class="user-nav__search-image" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+          </svg>
+        </label> 
       </form>
-     <a href="blank.html">Закладки: 0</a>
-     <a href="blank.html">Корзина: 0</a>
-     <a href="blank.html">Оформить заказ</a>
+      <a class="bookmark" href="blank.html">Закладки: 0</a>
+      <a class="cart" href="blank.html">Корзина: 0</a>
+      <a class="checkout" href="blank.html">Оформить заказ</a>
+     </div>
     </div>
     <p class="header-text">
       <i>Интернет-магазин<br> 
@@ -27,15 +34,15 @@
       </i>
     </p>
     <div class="header-contacts">
-      <a href="tel:78125550555">+7(812)555-05-55</a>
+      <a class="header-contacts__phone" href="tel:78125550555">+7(812) 555-05-55</a>
      <p>
        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
      </p>
     </div>
     <div class="user-main">
      <ul class="user-main__list">
-      <li class="user-main__item"> <a href="blank.html">Войти</a></li>
-      <li class="user-main__item"><a href="blank.html">Регистрация</a></li>
+      <li class="user-main__item checkin"> <a href="blank.html">Войти</a></li>
+      <li class="user-main__item registration"><a href="blank.html">Регистрация</a></li>
      </ul>
     </div>
     <nav class="header-nav">
@@ -54,30 +61,30 @@
      <h1 class="visually-hidden">Интернет магазин инструмента и стройматериалов «Техномарт»</h1>
      <section class="main-features">
          <ul class="main-features__list">
-           <li class="main-features__item">
+           <li class="main-features__item features-materials">
              <h3>Материалы</h3>
-             <a href="blank.html">на любой вкус</a>
+             <a class="item-button" href="blank.html">на любой вкус</a>
            </li>
-           <li class="main-features__item">
+           <li class="main-features__item features-tools">
              <h3>Инструмент</h3>
-             <a href="blank.html">на все случаи</a>
+             <a class="item-button" href="blank.html">на все случаи</a>
            </li>
-           <li class="main-features__item">
+           <li class="main-features__item features-equipment">
             <h3>Техника</h3>
-            <a href="blank.html">для стройки</a>
+            <a class="item-button" href="blank.html">для стройки</a>
            </li>
            <li class="main-features__item slider">
             <div>
               <img src="img/rotary_hammers.jpg" width="620" height="266" alt="изображение мужчины с перфоратором BOSH в руках">
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
-              <a href="catalog.html">Открыть каталог</a>
+              <a class="slider-button page-button" href="catalog.html">Открыть каталог</a>
             </div>
             <div>
               <img src="img/drill.jpg" width="620" height="266" alt="изображение мужчины с дрелью BOSH в руках">
               <h3>Дрели</h3>
               <p>Соседям на радость</p>
-              <a href="catalog.html">Открыть каталог</a>
+              <a class="slider-button page-button" href="catalog.html">Открыть каталог</a>
             </div>
             <input type="radio" id="btn-1" name="toggle">
             <input type="radio" id="btn-2" name="toggle" checked>
@@ -85,22 +92,22 @@
               <label for="btn-1" aria-label="первый"></label>
               <label for="btn-2" aria-label="второй"></label>
             </div> 
-            <div class="slider-prv" arial-label="Прошлый слайд"></div>
+            <div class="slider-prv" aria-label="Предыдущий слайд"></div>
             <div class="slider-nxt" aria-label="Следующий слайд"></div>
            </li>
-           <li class="main-features__item">
+           <li class="main-features__item features-discount">
             <h3>Скидка 50%</h3>
-            <a href="blank.html">на 350 товаров</a>
+            <a class="item-button" href="blank.html">на 350 товаров</a>
            </li>
-           <li class="main-features__item">
+           <li class="main-features__item features-delivery">
             <h3>Доставка</h3>
-            <a href="blank.html">бесплатно</a>
+            <a class="item-button" href="blank.html">бесплатно</a>
            </li>
          </ul>
      </section>
      <section class="catalog-main">
-       <h2>Популярные товары:</h2>
-       <a href="blank.html">все популярные товары</a>
+       <h2 class="catalog-main__title">Популярные товары:</h2>
+       <a class="catalog-main__button page-button" href="blank.html">все популярные товары</a>
         <ul class="catalog-main__list">
          <li class="catalog-main__item">
            <p>
@@ -137,44 +144,44 @@
     </section>
     <section class="brends-main">
        <h2 class="brends-main__title">Популярные производители:</h2>
-       <a href="blank.html">Все производители</a>
-       <ul class="rends-main__list">
-          <li class="rends-main__item">
+       <a class="brends-main__button page-button" href="blank.html">Все производители</a>
+       <ul class="brends-main__list">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/bosh_logo.png" alt="логотип компании BOSH" width="126" height="37">
             </a>
           </li>
-          <li class="rends-main__item">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/makita_logo.png" alt="логотип компании Makita" width="123" height="40">
             </a>
           </li>
-          <li class="rends-main__item">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/dewalt_logo.png" alt="логотип компании DeWalt" width="146" height="44">
             </a>
           </li>
-          <li class="rends-main__item">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/interscol_logo.png" alt="логотип компании Интерскол" width="200" height="88">
             </a>
           </li>
-          <li class="rends-main__item">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/hitachi_logo.png" alt="логотип компании HITACHI" width="169" height="31">
             </a>
           </li>
-          <li class="rends-main__item">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/lg_logo.png" alt="логотип компании LG" width="121" height="73">
             </a>
           </li>
-          <li class="rends-main__item">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/aeg_logo.png" alt="логотип компании AEG" width="151" height="96">
             </a>
           </li>
-          <li class="rends-main__item">
+          <li class="brends-main__item">
             <a href="blank.html">
               <img src="img/metabo_logo.png" alt="логотип компании METABO" width="204" height="69">
             </a>
@@ -183,19 +190,19 @@
     </section>
     <section class="service-main">
      <h2 class="service-main__title">Сервисы</h2>
-     <p>
+     <p class="service-main__paragraph">
         Хороший интернет-магазин отличается от плохого не только ценами!
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
      </p>
      <div class="service-slider">
       <ul class="service-slider__list">
-        <li class="service-slider__item">Доставка</li>
+        <li class="service-slider__item slider__item_active">Доставка</li>
         <li class="service-slider__item">Гарантия</li>
         <li class="service-slider__item">Кредит</li>
       </ul>
         <div class="delivery-main">
-         <h3>Доставка</h3>
-         <p>
+         <h3 class="service-slider__title">Доставка</h3>
+         <p class="service-slider__paragraph">
           Мы с удовольствием доставим ваш товар прямо
           к вашему подъезду совершенно бесплатно!
           Ведь мы неплохо заработаем,<br>
@@ -203,8 +210,8 @@
          </p>
         </div>
         <div class="garanty-main">
-         <h3>Гарантия</h3>
-         <p>
+         <h3 class="service-slider__title">Гарантия</h3>
+         <p class="service-slider__paragraph">
           Если купленный у нас товар поломается или заискрит,<br>
           а также в случае пожара, спровоцированного его<br>
           возгоранием,  вы всегда можете быть уверены в нашей<br>
@@ -213,46 +220,46 @@
          </p>
         </div>
         <div class="credit-main">
-         <h3>Кредит</h3>
-         <p>
+         <h3 class="service-slider__title">Кредит</h3>
+         <p class="service-slider__paragraph">
           Залезть в долговую яму стало проще!<br>
           Кредитные консультанты придут вам на помощь.
-          <a href="#">Отправить заявку</a>
+          <a class="credit-main__button page-button" href="#">Отправить заявку</a>
          </p>
         </div>
      </div>
     </section>
-    <section>
-      <h2><strong>Компания «Техномарт»</strong></h2>
-      <p>
+    <section class="transport-company">
+      <h2 class="transport-company__title"><strong>Компания «Техномарт»</strong></h2>
+      <p class="transport-company__paragraph">
         Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и <br> 
         строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
       </p>
-      <p>
+      <p class="transport-company__paragraph">
         Мы можем доставить ваш товар в самые отдаленные точки России! <br>
         Техномарт работает со многими транспортными компаниями:
       </p>
-      <ul>
-        <li><strong>Деловые линии</strong></li>
-        <li><strong>Автотрейдинг</strong></li>
-        <li><strong>ЖелДорЭкспедиция</strong></li>
+      <ul class="transport-company__list">
+        <li class="transport-company__item"><strong>Деловые линии</strong></li>
+        <li class="transport-company__item"><strong>Автотрейдинг</strong></li>
+        <li class="transport-company__item"><strong>ЖелДорЭкспедиция</strong></li>
       </ul>
-      <a href="blank.html">Подробнее о компании</a>
+      <a class="transport-company__button page-button" href="blank.html">Подробнее о компании</a>
     </section>
-    <section>
-      <h2><strong>Контакты</strong></h2>
-      <p>
+    <section class="location-contacts">
+      <h2 class="location-contacts__title"><strong>Контакты</strong></h2>
+      <p class="location-contacts__paragraph">
         Вы можете забрать товар сами,<br>
         заехав в наш офис:
       </p>
-      <a href="https://yandex.ru/maps/">
+      <a class="location-contacts__map" href="https://yandex.ru/maps/">
        <img src="img/map.png" alt="схема проезда в компанию 'Техномарт'" width="300" height="158">
       </a>
-      <a href="blank.html">Заблудились? Напишите нам!</a>
+      <a class="location-contacts__feedback page-button" href="blank.html">Заблудились? Напишите нам!</a>
     </section>
    </main>
    <footer class="footer">
-    <section>
+    <section class="nav">
      <a class="footer-logo">
       <img src="img/logo-technomart.svg" alt="логотип компании 'Техномарт'" width="138" height="23">
      </a>
@@ -271,13 +278,13 @@
        <li class="footer-nav__item"><a href="blank.html">Спецпредложения</a></li>
       </ul>
      </div>
-     <p>
+     <p class="nav__paragraph">
       г.Санкт-Петербург,ул. Б. Конюшенная, д. 19/8 
      </p>
-     <a href="tel:78125550555">+7(812)555-05-55</a>
+     <a class="nav__phone" href="tel:78125550555">+7(812)555-05-55</a>
     </section>
-    <section>
-     <p>
+    <section class="footer-socials">
+     <p class="copyright">
        © 2010–2019 Компания «Техномарт»<br>
        Все права защищены
      </p>
@@ -288,18 +295,18 @@
         <li class="socials__link"><a href="#"><img src="img/icon-insta.svg" width="21" height="21" alt="Наш Инстаграм"></a></li>
       </ul>
      </div>
-     <p>
+     <p class="feedback-email">
        Обратная связь:<br>
       <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
      </p>
-     <p>
+     <p class="author">
       Разработано - <br>
       <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
      </p>
     </section>
    </footer> 
    <section class="modal-feedback">
-    <div class="modal-feedback__content">
+    <div class="feedback-content">
      <form action="https://echo.htmlacademy.ru/" method="post">
       <p>
        <label for="user_name">Ваше имя:</label>
@@ -313,15 +320,23 @@
        <label for="mail_text-area">Текст письма:</label>
        <textarea name="mail_text" id="mail_text-area" rows="6">В свободной форме</textarea>
       </p>
-       <button type="submit">Отправить</button>
+       <button class="feedback-content__button page-button" type="submit">Отправить</button>
      </form>
-     <button class="modal-feedback__close" type="button" aria-label="Закрыть форму"></button>
+     <button class="feedback-content__close" type="button" aria-label="Закрыть форму">
+       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.2729 10.5001L20.6949 3.07806C21.0839 2.68906 21.0839 2.05306 20.6949 1.66406L19.3359 0.305056C18.9469 -0.0839443 18.3109 -0.0839443 17.9219 0.305056L10.4999 7.72706L3.07793 0.305056C2.68893 -0.0839443 2.05293 -0.0839443 1.66393 0.305056L0.304934 1.66406C-0.0840664 2.05306 -0.0840664 2.68906 0.304934 3.07806L7.72693 10.5001L0.305934 17.9221C-0.0830664 18.3111 -0.0830664 18.9471 0.305934 19.3361L1.66493 20.6951C2.05393 21.0841 2.68993 21.0841 3.07893 20.6951L10.5009 13.2731L17.9229 20.6951C18.3119 21.0841 18.9479 21.0841 19.3369 20.6951L20.6959 19.3361C21.0849 18.9471 21.0849 18.3111 20.6959 17.9221L13.2729 10.5001Z" fill="#EE3643"/>
+      </svg>
+    </button>
     </div>
    </section> 
    <section class="map-popup">
      <div class="map-popup__content">
        <img src="img/map_popup.png" width="943" height="449" alt="Большая схема с месторасположением компании Техномарт">
-       <button class="map-popup__close" type="button" aria-label="Закрыть карту"></button>
+       <button class="map-popup__close" type="button" aria-label="Закрыть карту">
+         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.2729 10.5001L20.6949 3.07806C21.0839 2.68906 21.0839 2.05306 20.6949 1.66406L19.3359 0.305056C18.9469 -0.0839443 18.3109 -0.0839443 17.9219 0.305056L10.4999 7.72706L3.07793 0.305056C2.68893 -0.0839443 2.05293 -0.0839443 1.66393 0.305056L0.304934 1.66406C-0.0840664 2.05306 -0.0840664 2.68906 0.304934 3.07806L7.72693 10.5001L0.305934 17.9221C-0.0830664 18.3111 -0.0830664 18.9471 0.305934 19.3361L1.66493 20.6951C2.05393 21.0841 2.68993 21.0841 3.07893 20.6951L10.5009 13.2731L17.9229 20.6951C18.3119 21.0841 18.9479 21.0841 19.3369 20.6951L20.6959 19.3361C21.0849 18.9471 21.0849 18.3111 20.6959 17.9221L13.2729 10.5001Z" fill="#EE3643"/>
+        </svg>
+      </button>
      </div>
    </section>  
   </body>
