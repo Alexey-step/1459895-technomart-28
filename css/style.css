@@ -84,6 +84,7 @@ background-color: var(--basic-background);
 
 .header-main {
 background-color: var(--special-darkblue);
+margin-bottom: 41px;
 }
 
 .container {
@@ -98,6 +99,7 @@ align-items: center;
 }
 
 .header-logo {
+display: inline-block;
 background-color: var(--basic-red);
 box-shadow: 0 -5px 0 0 rgba(0, 0, 0, 0.24) inset;
 text-align: center;
@@ -168,6 +170,7 @@ fill: var(--basic-red);
 .bookmark {
 position: relative;
 padding-left: 23px;
+display: inline-block;
 }
 
 .bookmark::before {
@@ -184,6 +187,7 @@ opacity: 0.3;
 }
 
 .cart {
+display: inline-block;
 position: relative;
 padding-left: 23px;
 }
@@ -217,6 +221,7 @@ background-color: var(--special-blackblue);
 }
 
 .checkout {
+display: inline-block;
 background-color: var(--basic-green);
 padding-top: 9px;
 padding-bottom: 9px;
@@ -246,17 +251,13 @@ color: var(--basic-red);
 margin: 0;
 padding: 0;
 margin-left: 29px;
-margin-top: 37px;
 margin-bottom: 44px;
 width: 197px;
 height: 71px;
 }
 
-.header-contacts {
-margin-top: 41px;
-}
-
 .header-contacts__phone {
+display: inline-block;
 position: relative;
 padding-left: 74px;
 padding-top: 7px;
@@ -303,7 +304,6 @@ align-items: center;
 justify-content: flex-end;
 margin: 0;
 padding: 0;
-margin-top: 41px;
 }
 
 .registration {
@@ -341,6 +341,7 @@ background-color: var(--black-opacitymin);
 }
 
 .user-main__item a {
+display: inline-block;
 font-family: "Cuprum", Arial, sans-serif;
 font-size: 21px;
 line-height: 21px;
@@ -368,13 +369,12 @@ display: flex;
 justify-content: space-around;
 margin: 0;
 padding: 0;
-}
-
-.header-nav__link {
-
+background-color: var(--basic-darkblue);
+box-shadow: 0 -5px 0 0 var(--special-darkblue) inset;
 }
 
 .header-nav__link a {
+display: inline-block;
 font-family: "Cuprum", Arial, sans-serif;
 font-size: 18px;
 line-height: 24px;
@@ -383,6 +383,8 @@ font-weight: normal;
 color: var(--white);
 padding-top: 16px;
 padding-bottom: 20px;
+padding-left: 28px;
+padding-right: 28px;
 background-color: var(--basic-darkblue);
 box-shadow: 0 -5px 0 0 var(--special-darkblue) inset;
 }
@@ -426,6 +428,7 @@ color: var(--white);
 }
 
 .item-button {
+display: inline-block;
 font-family: "Cuprum", Arial, sans-serif;
 text-transform: uppercase;
 background-color: var(--basic-opacitywhite);
@@ -479,7 +482,7 @@ color: var(--white);
 }
 
 .slider-button {
-
+display: inline-block;
 }
 
 .page-button {
@@ -547,6 +550,7 @@ border: 1px solid var(--light-grey);
 box-sizing: border-box;
 width: 220px;
 min-height: 318px;
+margin-bottom: 20px;
 }
 
 .bosh-9000 {
@@ -573,6 +577,7 @@ color: var(--basic-black);
 
 .catalog-main__item a {
 color: var(--basic-black);
+display: inline-block;
 }
 
 .old_price {
@@ -609,6 +614,7 @@ margin-bottom: 20px;
 }
 
 .brends-main__button {
+display: inline-block;
 width: 192px;
 padding: 11px 38px 9px 39px;
 margin-right: 19px;        
@@ -625,21 +631,25 @@ margin-left: 28px;
 
 .brends-main__list {
 list-style: none;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-rows: 145px 145px;
-gap: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 margin-bottom: 70px;
-align-items: center;
 text-align: center;
+align-items: center;
 }
 
 .brends-main__item {
 background-color: var(--white);
 border: 1px solid var(--light-grey);
 box-sizing: border-box;
+margin-bottom: 20px;
 width: 220px;
 min-height: 145px;
+}
+
+.brends-main__item a {
+display: inline-block;
 }
 
 .brends-main__item:hover {
@@ -744,6 +754,10 @@ line-height: 24px;
 color: var(--basic-black);
 }
 
+.credit-main__button {
+display: inline-block;
+}
+
 .company-main {
 display: flex;
 justify-content: space-between;
@@ -800,6 +814,7 @@ margin-bottom: 12px;
 }
 
 .transport-company__button {
+display: inline-block;
 padding: 11px 40px 9px 40px;
 margin: 0;
 }
@@ -831,6 +846,7 @@ margin-bottom: 25px;
 }
 
 .location-contacts__feedback {
+display: inline-block;
 padding: 11px 61px 9px 62px;
 }
 
@@ -844,6 +860,9 @@ grid-template-columns: 1fr 1fr;
 padding: 0;
 }
 
+.footer-logo {
+display: inline-block;
+}
 
 .footer-logo img {
 background-color: var(--basic-red);
@@ -869,6 +888,7 @@ margin-bottom: 34px;
 }
 
 .footer-nav__link a {
+display: inline-block;
 font-family: "Cuprum", Arial, sans-serif;
 font-size: 18px;
 line-height: 24px;
@@ -897,6 +917,7 @@ justify-content: space-between;
 }
 
 .footer-nav__item a {
+display: inline-block;
 font-family: "Cuprum", Arial, sans-serif;
 font-size: 18px;
 line-height: 24px;
@@ -922,6 +943,10 @@ font-style: normal;
 font-weight: normal;
 color: var(--basic-background);
 margin: 0;
+}
+
+.nav__phone {
+display: inline-block;
 }
 
 .nav__paragraph {
@@ -957,6 +982,7 @@ margin-left: 161px;
 }
 
 .socials__link a {
+display: inline-block;
 background: var(--basic-darkgradient);
 }
 
@@ -980,6 +1006,7 @@ margin-left: 118px;
 }
 
 .feedback-email a {
+display: inline-block;
 color: var(--special-yellowlight);
 }
 
@@ -1004,6 +1031,7 @@ width: 98px;
 }
 
 .author a {
+display: inline-block;
 color: var(--special-yellowlight);
 }
 
@@ -1054,7 +1082,15 @@ border: none;
 background-color: var(--white);
 }
 
+.user-catalog {
+width: 299px;
+min-height: 70px;
+margin-left: 51px;
+justify-self: end;
+}
+
 .user-catalog__link {
+display: inline-block;
 position: relative;
 padding-left: 41px;
 padding-right: 40px;
@@ -1078,14 +1114,19 @@ background-repeat: no-repeat;
 background-position: 0 0;
 }
 
-.user-catalog__link_logout {
-    
+.user-catalog__list {
+display: flex;
+justify-content: space-between;
+width: 210px;
+margin: 0;
+padding: 0;
 }
 
-.user-catalog__list {
+.user-catalog__item:first-child {
 list-style: none;
 }
 .user-catalog__item a {
+display: inline-block;
 font-family: "Cuprum", Arial, sans-serif;
 font-size: 16px;
 line-height: 18px;
@@ -1105,9 +1146,13 @@ align-content: start;
 list-style: none;
 margin: 0;
 padding: 0;
+display: flex;
+margin-bottom: 20px;
+margin-top: 21px;
 }
 
 .breadcrumbs__item a {
+display: inline-block;
 font-family: "Cuprum", Arial, sans-serif;
 font-size: 13px;
 line-height: 18px;
@@ -1126,6 +1171,21 @@ font-weight: normal;
 text-transform: uppercase;
 color: var(--basic-darkblue);
 background-color: var(--basic-pinkwhite);
+margin: 0;
+padding: 0;
+margin-bottom: 20px;
+padding-top: 29px;
+padding-bottom: 30px;
+padding-left: 20px;
+}
+
+.catalog-container {
+display: grid;
+grid-template-columns: 220px 1fr;
+}
+
+.sorting-container {
+margin-left: 21px;
 }
 
 .catalog-filter {
@@ -1136,6 +1196,12 @@ line-height: 18px;
 color: var(--basic-black);
 text-transform: uppercase;
 font-weight: normal;
+margin: 0;
+padding: 0;
+margin-bottom: 14.15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 18px;
 }
 
 .catalog-container__filter legend {
@@ -1148,13 +1214,28 @@ text-transform: uppercase;
 color: var(--basic-black);
 }
 
-.price,
-.manufacturers,
-.nutrition {
+.catalog-container__filter {
+width: 220px;
+}
+
+.price-filter legend {
+margin: 0;
+padding: 0;
+margin-bottom: 10.85px;
+}
+
+.price-range {
+background-color: var(--basic-beige);
+padding: 39px 48px 39px 20px;
+}
+
+.catalog-container__filter fieldset {
+margin: 0;
+padding: 0;
 border: none;
 }
 
-.price output {
+.price-filter output {
 font-family: "PT Sans", Arial, sans-serif;
 font-weight: normal;
 font-size: 17px;
@@ -1164,9 +1245,43 @@ color: var(--basic-black);
 background-color: var(--basic-beige);
 }
 
+.output {
+display: flex;
+justify-content: space-between;
+margin: 0;
+margin-bottom: 42px;
+align-items: center;
+}
+
+.price-filter output:first-child {
+padding: 10px 43px 10px 42px;
+}
+
+.price-filter output:last-child {
+padding: 10px 24px;
+}
+
+.manufacturers legend {
+margin-bottom: 17.5px;
+}
+
+.nutrition legend {
+margin-bottom: 23.35px;
+}
+
 .manufacturers__list,
 .nutrition__list {
 list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.manufacturers__list {
+margin-bottom: 46px;
+}
+
+.nutrition__list {
+margin-bottom: 37.15px;
 }
 
 .manufacturers__item,
@@ -1175,6 +1290,7 @@ font-family: "PT Sans", Arial, sans-serif;
 font-size: 15px;
 line-height: 19px;
 text-transform: uppercase;
+margin-bottom: 20px;
 }
 
 .item-checkbox:hover,
@@ -1196,19 +1312,37 @@ font-weight: normal;
 text-transform: uppercase;
 text-align: center;
 color: var(--basic-black);
+padding: 10px 79.57px 10px 78.43px;
+}
+
+.sorting {
+display: flex;
+margin: 0;
+padding: 0;
+background-color: var(--special-whitegrey);
+align-items: center;
+margin-bottom: 28px;
 }
 
 .sorting p {
-background-color: var(--special-whitegrey);
 font-family: "PT Sans", Arial, sans-serif;
 font-size: 13px;
 line-height: 18px;
 color: var(--basic-black);
 text-transform: uppercase;
+margin: 0;
+padding: 0;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 19px;
 }
 
 .sorting__list {
 list-style: none;
+display: flex;
+margin: 0;
+padding: 0;
+margin-left: 140px;
 }
 
 .sorting__item button {
@@ -1216,10 +1350,12 @@ font-family: "PT Sans", Arial, sans-serif;
 font-size: 13px;
 line-height: 18px;
 color: var(--basic-opacityblack);
-background-color: var(--white);
+background-color: var(--special-whitegrey);
 border: none;
 text-transform: uppercase;
 border-bottom: 1px dotted var(--basic-red);
+margin: 0;
+padding: 0;
 }
 
 .sorting__item button:hover,
@@ -1233,8 +1369,17 @@ color: var(--basic-red);
 border-bottom: none;
 }
 
+.catalog-content {
+margin-bottom: 48px;
+}
+
 .catalog-content__list {
 list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 0;
+padding: 0;
 }
 
 .content-buttons__cart {
@@ -1302,11 +1447,21 @@ border: 3px solid var(--basic-darkblue);
 opacity: 0.5;
 }
 
+.catalog-pagination {
+width: 284px;
+margin-bottom: 59px;
+}
+
 .catalog-pagination__list {
 list-style: none;
+display: flex;
+justify-content: space-between;
+margin: 0;
+padding: 0;
 }
 
 .catalog-pagination__link a {
+display: inline-block;
 font-family: "PT Sans", Arial, sans-serif;
 font-size: 13px;
 line-height: 18px;
@@ -1317,6 +1472,7 @@ color: var(--basic-black);
 border: 1px solid var(--basic-whitegrey);
 box-sizing: border-box;
 border-radius: 2px;
+padding:  10px 15px 10px 15px;
 }
 
 .catalog-pagination__link:last-child {
@@ -1340,6 +1496,8 @@ color: var(--white);
 
 .about {
 background-color: var(--basic-background);
+padding-top: 64px;
+padding-bottom: 68px;
 }
 
 .about h2 {
@@ -1347,7 +1505,10 @@ font-family: "Cuprum", Arial, sans-serif;
 font-size: 30px;
 line-height: 30px;
 text-transform: uppercase;
-color: var(--basic-black)
+color: var(--basic-black);
+margin: 0;
+padding: 0;
+margin-bottom: 25px;
 }
 
 .about p {
@@ -1355,6 +1516,8 @@ font-family: "PT Sans", Arial, sans-serif;
 font-size: 13px;
 line-height: 24px;
 color: var(--basic-black);
+margin: 0;
+padding: 0;
 }
 
 .modal-cart__content p {
