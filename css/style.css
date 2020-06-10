@@ -48,6 +48,7 @@
 --special-darkgreen: #367315;
 --modal-cart: #f1f1f1;
 --filter-checkbox: rgba(0, 0, 0, 0.4);
+--hover-button: #ca2c37;
 }
 
 body {
@@ -686,6 +687,11 @@ background-image: url("../img/icon-right.svg");
 background-repeat: no-repeat;
 background-position: 0 0;
 cursor: pointer;
+}
+
+.page-button:hover,
+.page-button:focus {
+background-color: var(--hover-button);
 }
 
 .page-button:active {
