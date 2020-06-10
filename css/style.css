@@ -1088,9 +1088,22 @@ display: block;
 }
 
 .service-slider__list {
+position: relative;
 list-style: none;
 margin: 0;
 padding: 0;
+}
+
+.service-slider__list::after {
+content: "";
+position: absolute;
+width: 10px;
+height: 279px;
+top: -40px;
+right: 80px;
+background-image: url("../img/shadow.png");
+background-repeat: no-repeat;
+background-position: 0 0;
 }
 
 .service-slider__item {
@@ -2113,6 +2126,10 @@ display: none;
 
 .filter-input-checkbox:checked + label svg {
 display: block;
+}
+
+.filter-input-checkbox:checked + label::before {
+display: none;
 }
 
 .filter-input-checkbox:checked:hover + label path,
