@@ -23,12 +23,14 @@
            </svg>
          </label> 
        </form>
-       <a class="bookmark" href="blank.html">Закладки: 0</a>
-       <a class="cart" href="blank.html">Корзина: 0</a>
-       <a class="checkout" href="blank.html">Оформить заказ</a>
+        <div class="user-nav__container">
+          <a class="bookmark" href="blank.html">Закладки: 0</a>
+          <a class="cart" href="blank.html">Корзина: 0</a>
+          <a class="checkout" href="blank.html">Оформить заказ</a>
+        </div>
+       </div>
       </div>
      </div>
-    </div>
     <div class="header-contacts__container container">
       <p class="header-text">
         Интернет-магазин<br> 
@@ -68,6 +70,7 @@
      <section class="main-features container">
          <ul class="main-features__list">
            <li class="main-features__item features-materials features--item">
+             <div class="flag flag-new">Новинка</div>
              <h3>Материалы</h3>
              <a class="item-button" href="blank.html">на любой вкус</a>
            </li>
@@ -86,7 +89,7 @@
               <p class="slider-paragraph">Настоящие мужские игрушки</p>
               <a class="slider-button page-button" href="catalog.html">Открыть каталог</a>
             </div>
-            <div class="slider-item">
+            <div class="slider-item slide">
               <img src="img/drill.jpg" width="620" height="266" alt="изображение мужчины с дрелью BOSH в руках">
               <h3 class="slider-title">Дрели</h3>
               <p class="slider-paragraph">Соседям на радость</p>
@@ -117,8 +120,8 @@
         <ul class="catalog-main__list container">
          <li class="catalog-main__item ">
            <div class="content-buttons">
-            <a href="#" class="content-cart">Купить</a>
-            <a href="#" class="content-bookmark">В закладки</a>
+            <a class="content-cart" href="blank.html">Купить</a>
+            <a class="content-bookmark" href="blank.html">В закладки</a>
            </div>
            <div class="image"><img class="bosh-9000" src="img/bfg_bosh_9000.jpg" alt="Перфоратор BOSH BFG 9000" width="184" height="164"></div> 
            <h3><a href="#">Перфоратор BOSCH BFG 9000</a></h3>
@@ -128,8 +131,8 @@
          <li class="catalog-main__item">
            <div class="flag flag-new">Новинка</div>
            <div class="content-buttons">
-            <a href="#" class="content-cart">Купить</a>
-            <a href="#" class="content-bookmark">В закладки</a>
+            <a class="content-cart" href="blank.html">Купить</a>
+            <a class="content-bookmark" href="blank.html">В закладки</a>
            </div>
            <div class="image"><img class="bosh-3000" src="img/bfg_bosh_3000.jpg" alt="Перфоратор BOSH BFG 3000" width="127" height="112"></div>
            <h3><a href="#">Перфоратор BOSCH BFG 3000</a></h3>
@@ -138,8 +141,8 @@
          </li>
          <li class="catalog-main__item">
            <div class="content-buttons">
-            <a href="#" class="content-cart">Купить</a>
-            <a href="#" class="content-bookmark">В закладки</a>
+            <a class="content-cart" href="blank.html">Купить</a>
+            <a class="content-bookmark" href="blank.html">В закладки</a>
            </div>
            <div class="image"><img class="bosh-6000" src="img/bfg_bosh_6000.jpg" alt="Перфоратор BOSH BFG 6000" width="144" height="128"></div> 
            <h3><a href="#">Перфоратор BOSCH BFG 6000</a></h3>
@@ -149,8 +152,8 @@
          <li class="catalog-main__item">
           <div class="flag flag-new">Новинка</div>
           <div class="content-buttons">
-            <a href="#" class="content-cart">Купить</a>
-            <a href="#" class="content-bookmark">В закладки</a>
+            <a class="content-cart" href="blank.html">Купить</a>
+            <a class="content-bookmark" href="blank.html">В закладки</a>
           </div> 
           <div class="image"><img class="bosh-2000" src="img/bfg_bosh_2000.jpg" alt="Перфоратор BOSH BFG 2000" width="127" height="112"></div> 
           <h3><a href="#">Перфоратор BOSCH BFG 2000</a></h3>
@@ -211,7 +214,7 @@
      <div class="container">
       <h2 class="service-main__title">Сервисы</h2>
       <p class="service-main__paragraph">
-        Хороший интернет-магазин отличается от плохого не только ценами!<br>
+        Хороший интернет-магазин отличается от плохого не только ценами!
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
       </p>
       <div class="service-slider">
@@ -223,8 +226,8 @@
         <div class="delivery-main service-slide service-slide__active">
          <h3 class="service-slider__title">Доставка</h3>
          <p class="service-slider__paragraph">
-          Мы с удовольствием доставим ваш товар прямо<br>
-          к вашему подъезду совершенно бесплатно!<br>
+          Мы с удовольствием доставим ваш товар прямо
+          к вашему подъезду совершенно бесплатно!
           Ведь мы неплохо заработаем,<br>
           поднимая его на ваш этаж!
          </p>
@@ -233,8 +236,8 @@
          <h3 class="service-slider__title">Гарантия</h3>
          <p class="service-slider__paragraph">
           Если купленный у нас товар поломается или заискрит,<br>
-          а также в случае пожара, спровоцированного его<br>
-          возгоранием,  вы всегда можете быть уверены в нашей<br>
+          а также в случае пожара, спровоцированного его
+          возгоранием,  вы всегда можете быть уверены в нашей
           гарантии. Мы обменяем сгоревший товар на новый.<br>
           Дом уж восстановите как-нибудь сами.
          </p>
@@ -242,7 +245,7 @@
         <div class="credit-main service-slide">
          <h3 class="service-slider__title">Кредит</h3>
          <p class="service-slider__paragraph">
-          Залезть в долговую яму стало проще!<br>
+          Залезть в долговую яму стало проще!
           Кредитные консультанты придут вам на помощь.
           <a class="credit-main__button page-button" href="#">Отправить заявку</a>
          </p>
@@ -334,10 +337,9 @@
      </div>
     </section>
    </footer> 
-   <section class="modal-feedback">
-    <div class="feedback-content">
-     <div class="decorate"></div>
+   <section class="modal-feedback feedback-content">
      <form class="main-form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="main-form__container">
        <p class="main-form__item">
         <label for="user_name">Ваше имя:</label>
         <input type="text" name="name" id="user_name" placeholder="Имя Фамилия">
@@ -348,29 +350,29 @@
        </p>
        <p class="main-form__item">
         <label for="mail_text-area">Текст письма:</label>
-        <textarea name="mail_text" id="mail_text-area">В свободной форме</textarea>
+        <textarea name="mail_text" id="mail_text-area" rows="5">В свободной форме</textarea>
        </p>
-     <div class="button-container">
-      <button class="feedback-content__button page-button" type="submit">Отправить</button>
-    </div>
+      </div>
+      <div class="button-container">
+       <button class="feedback-content__button page-button" type="submit">Отправить</button>
+      </div>
      </form>
      <button class="feedback-content__close" type="button" aria-label="Закрыть форму">
        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.2729 10.5001L20.6949 3.07806C21.0839 2.68906 21.0839 2.05306 20.6949 1.66406L19.3359 0.305056C18.9469 -0.0839443 18.3109 -0.0839443 17.9219 0.305056L10.4999 7.72706L3.07793 0.305056C2.68893 -0.0839443 2.05293 -0.0839443 1.66393 0.305056L0.304934 1.66406C-0.0840664 2.05306 -0.0840664 2.68906 0.304934 3.07806L7.72693 10.5001L0.305934 17.9221C-0.0830664 18.3111 -0.0830664 18.9471 0.305934 19.3361L1.66493 20.6951C2.05393 21.0841 2.68993 21.0841 3.07893 20.6951L10.5009 13.2731L17.9229 20.6951C18.3119 21.0841 18.9479 21.0841 19.3369 20.6951L20.6959 19.3361C21.0849 18.9471 21.0849 18.3111 20.6959 17.9221L13.2729 10.5001Z" fill="#EE3643"/>
       </svg>
     </button>
-    </div>
    </section> 
-   <section class="map-popup">
-     <div class="map-popup__content">
-       <div class="map-decorate"></div>
-       <img src="img/map_popup.png" width="943" height="449" alt="Большая схема с месторасположением компании Техномарт">
-       <button class="map-popup__close" type="button" aria-label="Закрыть карту">
+   <section class="map-modal map-modal__content">
+     <div class="map__content">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002762!2d30.320858715640316!3d59.93871916905475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591703635800!5m2!1sru!2sru" width="943" height="449" allowfullscreen="" title="Большая схема с месторасположением компании Техномарт"></iframe>
+       <button class="map-modal__close" type="button" aria-label="Закрыть карту">
          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.2729 10.5001L20.6949 3.07806C21.0839 2.68906 21.0839 2.05306 20.6949 1.66406L19.3359 0.305056C18.9469 -0.0839443 18.3109 -0.0839443 17.9219 0.305056L10.4999 7.72706L3.07793 0.305056C2.68893 -0.0839443 2.05293 -0.0839443 1.66393 0.305056L0.304934 1.66406C-0.0840664 2.05306 -0.0840664 2.68906 0.304934 3.07806L7.72693 10.5001L0.305934 17.9221C-0.0830664 18.3111 -0.0830664 18.9471 0.305934 19.3361L1.66493 20.6951C2.05393 21.0841 2.68993 21.0841 3.07893 20.6951L10.5009 13.2731L17.9229 20.6951C18.3119 21.0841 18.9479 21.0841 19.3369 20.6951L20.6959 19.3361C21.0849 18.9471 21.0849 18.3111 20.6959 17.9221L13.2729 10.5001Z" fill="#EE3643"/>
         </svg>
       </button>
      </div>
-   </section>  
+   </section> 
+   <script src="js/script.js"></script> 
   </body>
 </html>
