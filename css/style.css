@@ -225,7 +225,7 @@ opacity: 0.3;
 .cart {
 display: block;
 position: relative;
-padding: 9px 27px 8px 35px;
+padding: 9px 27px 9px 35px;
 margin: 0;
 }
 
@@ -272,7 +272,7 @@ vertical-align: middle;
 background-color: var(--basic-green);
 margin: 0;
 padding-top: 9px;
-padding-bottom: 8px;
+padding-bottom: 9px;
 padding-left: 19px;
 padding-right: 16px;
 }
@@ -620,12 +620,12 @@ left: 24px;
 padding: 11px 46px 9px 46px;
 }
 
-.slider-current {
-display: block;
+.slider-item {
+display: none;
 }
 
-.slide {
-display: none;
+.slider-current {
+display: block;
 }
 
 .slider-controls {
@@ -638,7 +638,7 @@ width: 30px;
 justify-content: space-between;
 }
 
-.slider-controls button {
+.slide-button {
 padding: 0;
 width: 10px;
 height: 10px;
@@ -648,7 +648,7 @@ border-radius: 50%;
 cursor: pointer;
 }
 
-.slider-controls .checked-button {
+.button-current {
 background-color: var(--basic-red);
 }
 

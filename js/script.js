@@ -11,6 +11,23 @@ var cartModal = document.querySelector('.modal-cart');
 var cartButton = document.querySelectorAll('.content-cart');
 var closeCartButton = document.querySelector('.modal-cart__close');
 
+var btn = document.querySelectorAll('.slide-button');
+var slide = document.querySelectorAll('.slider-item');
+
+for (var i = 0; i < btn.length; i++) {
+    btn[i].onclick = function () {
+       
+        var currentBtn = document.querySelector('.button-current');
+        currentBtn.classList.remove('button-current');
+        this.classList.add('button-current');
+    
+        var currentSlide = document.querySelector('.slider-current');
+        currentSlide.classList.remove('slider-current');
+        slide[i].classList.add('slider-current');
+    }
+};
+
+
 var isStorageSupport = true;
 var storage = "";
 
