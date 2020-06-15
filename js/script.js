@@ -12,7 +12,14 @@ var cartButton = document.querySelectorAll('.content-cart');
 var closeCartButton = document.querySelector('.modal-cart__close');
 
 var btn = document.querySelectorAll('.slide-button');
-var slide = document.querySelectorAll('.slider-item');
+var secondSlide = document.querySelector('.second-slide');
+var firstSlide = document.querySelector('.first-slide');
+var prvSlide = document.querySelector('.slider-prv');
+var nxtSlide = document.querySelector('.slider-nxt');
+
+var serviceBtn = document.querySelectorAll(".service-slider__item");
+var serviceSlide = document.querySelectorAll(".service-slide");
+var j, h, k;
 
 for (var i = 0; i < btn.length; i++) {
     btn[i].onclick = function () {
@@ -21,12 +28,57 @@ for (var i = 0; i < btn.length; i++) {
         currentBtn.classList.remove('button-current');
         this.classList.add('button-current');
     
-        var currentSlide = document.querySelector('.slider-current');
-        currentSlide.classList.remove('slider-current');
-        slide[i].classList.add('slider-current');
+        if (secondSlide.classList.contains('slider-current')) {
+            secondSlide.classList.remove('slider-current');
+            firstSlide.classList.add('slider-current')
+        } else {
+            firstSlide.classList.remove('slider-current');
+            secondSlide.classList.add('slider-current');
+        }
+       
     }
 };
+if (prvSlide !== null) {
+prvSlide.addEventListener('click', function() {
+    if (secondSlide.classList.contains('slider-current')) {
+        secondSlide.classList.remove('slider-current');
+        firstSlide.classList.add('slider-current')
+    } else {
+        firstSlide.classList.remove('slider-current');
+        secondSlide.classList.add('slider-current');
+    }
+   
+});};
 
+if (nxtSlide !== null) {
+nxtSlide.addEventListener('click', function() {
+    if (secondSlide.classList.contains('slider-current')) {
+        secondSlide.classList.remove('slider-current');
+        firstSlide.classList.add('slider-current')
+    } else {
+        firstSlide.classList.remove('slider-current');
+        secondSlide.classList.add('slider-current');
+    }
+   
+});};
+
+for (i = 0; i < serviceBtn.length; ++i) {
+	serviceBtn[i].addEventListener("click", function (event) {
+		event.preventDefault(event);
+        for (j = 0; j < serviceBtn.length; ++j) {
+            serviceBtn[j].classList.remove("slider__item_active");        
+        }
+        for (h = 0; h < serviceBtn.length; ++h) {
+            if (serviceBtn[h] == this) {
+                serviceBtn[h].classList.add("slider__item_active");
+                for (k = 0; k < serviceSlide.length; ++k) {
+                    serviceSlide[k].classList.remove("service-slide__active");
+                }
+                serviceSlide[h].classList.add("service-slide__active");
+            }
+        }
+	})
+}
 
 var isStorageSupport = true;
 var storage = "";
