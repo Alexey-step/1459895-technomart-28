@@ -208,7 +208,7 @@ align-items: flex-start;
 .bookmark {
 position: relative;
 display: block;
-padding: 10px 38px 9px 43px;
+padding: 10px 38px 8px 43px;
 }
 
 .bookmark::before {
@@ -1169,6 +1169,8 @@ line-height: 24px;
 color: var(--basic-black);
 padding: 0;
 margin: 0;
+z-index: 2;
+position: relative;
 }
 
 .credit-main {
@@ -1186,6 +1188,7 @@ height: 285px;
 background-image: url("../img/credit_logo.png");
 background-repeat: no-repeat;
 background-position: 0 0;
+z-index: 1;
 }
 
 .credit-main__button {
@@ -1213,6 +1216,7 @@ height: 261px;
 background-image: url("../img/delivery_logo.png");
 background-repeat: no-repeat;
 background-position: 0 0;
+z-index: 1;
 }
 
 .garanty-main {
@@ -1230,6 +1234,7 @@ height: 283px;
 background-image: url("../img/garanty_logo.png");
 background-repeat: no-repeat;
 background-position: 0 0;
+z-index: 1;
 }
 
 .company-main {
@@ -1883,7 +1888,6 @@ align-content: start;
 }
 
 .breadcrumbs__list {
-width: 463px;
 list-style: none;
 margin: 0;
 padding: 0;
@@ -1913,16 +1917,8 @@ margin-top: 3px;
 position: relative;
 }
 
-.breadcrumbs__item:nth-child(1) {
+.breadcrumbs__item {
 margin-right: 41px;
-}
-
-.breadcrumbs__item:nth-child(2) {
-margin-right: 40px;
-}
-
-.breadcrumbs__item:nth-child(3) {
-margin-right: 43px;
 }
 
 .breadcrumbs-arrow::before {
@@ -2294,13 +2290,11 @@ padding: 0;
 margin-left: 140px;
 }
 
-.sorting__item button {
+.sorting__item .sorting--item {
 font-family: "PT Sans", Arial, sans-serif;
 font-size: 13px;
 line-height: 18px;
 color: var(--basic-opacityblack);
-background-color: transparent;
-border: none;
 text-transform: uppercase;
 border-bottom: 1px dotted var(--basic-red);
 margin: 0;
@@ -2338,18 +2332,18 @@ fill: var(--basic-black);
 fill: var(--basic-red);
 }
 
-.sorting__item button:hover,
-.sorting__item button:focus {
+.sorting__item .sorting--item:hover,
+.sorting__item .sorting--item:focus {
 color: var(--basic-black);
 border-bottom: 1px solid var(--basic-red);
 }
 
-.sorting__item:active button {
+.sorting__item:active .sorting--item{
 color: var(--basic-red);
 border-bottom: none;
 }
 
-.sorting__item_active button {
+.sorting__item_active .sorting--item {
 color: var(--basic-red);
 border-bottom: none;
 }

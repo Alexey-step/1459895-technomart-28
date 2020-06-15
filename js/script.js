@@ -17,8 +17,8 @@ var firstSlide = document.querySelector('.first-slide');
 var prvSlide = document.querySelector('.slider-prv');
 var nxtSlide = document.querySelector('.slider-nxt');
 
-var serviceBtn = document.querySelectorAll(".service-slider__item");
-var serviceSlide = document.querySelectorAll(".service-slide");
+var serviceBtn = document.querySelectorAll('.service-slider__item');
+var serviceSlide = document.querySelectorAll('.service-slide');
 var j, h, k;
 
 for (var i = 0; i < btn.length; i++) {
@@ -63,25 +63,25 @@ nxtSlide.addEventListener('click', function() {
 });};
 
 for (i = 0; i < serviceBtn.length; ++i) {
-	serviceBtn[i].addEventListener("click", function (event) {
+	serviceBtn[i].addEventListener('click', function (event) {
 		event.preventDefault(event);
         for (j = 0; j < serviceBtn.length; ++j) {
-            serviceBtn[j].classList.remove("slider__item_active");        
+            serviceBtn[j].classList.remove('slider__item_active');        
         }
         for (h = 0; h < serviceBtn.length; ++h) {
             if (serviceBtn[h] == this) {
-                serviceBtn[h].classList.add("slider__item_active");
+                serviceBtn[h].classList.add('slider__item_active');
                 for (k = 0; k < serviceSlide.length; ++k) {
-                    serviceSlide[k].classList.remove("service-slide__active");
+                    serviceSlide[k].classList.remove('service-slide__active');
                 }
-                serviceSlide[h].classList.add("service-slide__active");
+                serviceSlide[h].classList.add('service-slide__active');
             }
         }
 	})
 }
 
 var isStorageSupport = true;
-var storage = "";
+var storage = '';
 
 try {
     storage = localStorage.getItem('name');
