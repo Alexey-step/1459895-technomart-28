@@ -50,6 +50,7 @@
 --filter-checkbox: rgba(0, 0, 0, 0.4);
 --hover-button: #ca2c37;
 --logo-shadow: rgba(0, 0, 0, 0.24);
+--basic-yellow: rgb(202, 178, 70);
 }
 
 body {
@@ -1359,6 +1360,9 @@ margin-bottom: 34px;
 display: inline-block;
 vertical-align: middle;
 margin-bottom: 15px;
+width: 300px;
+height: 158px;
+background-color: var(--basic-greylight);
 }
 
 .location-contacts__feedback {
@@ -1761,6 +1765,21 @@ right: 10px;
 border: none;
 background-color: transparent;
 cursor: pointer;
+z-index: 3;
+}
+
+.map-iframe {
+z-index: 2;
+position: relative;
+}
+
+.map-big {
+width: 943px;
+height: 449px;
+position: absolute;
+top: 0;
+left: 0;
+margin: 0;
 }
 
 .user-catalog {
